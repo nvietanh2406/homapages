@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Sơ đồ hệ thống</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image-container {
+      position: relative;
+      user-select: none;
+      pointer-events: none; /* Ngăn kéo ảnh */
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      pointer-events: none; /* Ngăn chuột phải vào ảnh */
+    }
+
+    /* Ngăn menu chuột phải */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('dragstart', event => event.preventDefault());
+    document.addEventListener('copy', event => event.preventDefault());
+  </script>
+</head>
+<body>
+  <h1>Sơ đồ hệ thống</h1>
+  <div class="image-container">
+    <img src="images/archi-nva.drawio.png" alt="Sơ đồ hệ thống" />
+  </div>
+</body>
+</html>
